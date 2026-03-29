@@ -1,0 +1,12 @@
+{
+  "testUser": {
+    "username": "phamminhtrong324",
+    "password": "123456"
+  },
+  "testUser2": {
+    "username": "thanhnhan",
+    "password": "thanhnhan123"
+  },
+  "baseUrl": "http://localhost:5173",
+  "backendUrl": "http://localhost:5002"
+}

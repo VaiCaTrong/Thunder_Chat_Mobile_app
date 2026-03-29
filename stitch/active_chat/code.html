@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#6c5a00",
+              "on-tertiary-fixed-variant": "#675200",
+              "on-primary-fixed": "#180800",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#442100",
+              "on-error": "#ffefec",
+              "surface-container-high": "#ffddba",
+              "primary-fixed-dim": "#ea8000",
+              "secondary-dim": "#5e4e00",
+              "on-secondary-container": "#5b4b00",
+              "surface-tint": "#8c4a00",
+              "error-dim": "#b92902",
+              "on-error-container": "#520c00",
+              "surface": "#fff5ed",
+              "primary-fixed": "#fd8b00",
+              "primary-container": "#fd8b00",
+              "tertiary-fixed-dim": "#efc52b",
+              "on-secondary": "#fff2cd",
+              "on-primary-fixed-variant": "#512800",
+              "on-surface": "#452800",
+              "on-secondary-fixed": "#453900",
+              "surface-container-low": "#ffeedf",
+              "tertiary-dim": "#614d00",
+              "background": "#fff5ed",
+              "surface-container-highest": "#ffd6ab",
+              "surface-variant": "#ffd6ab",
+              "on-primary": "#fff0e7",
+              "on-surface-variant": "#7a5426",
+              "secondary-fixed-dim": "#efc900",
+              "tertiary-fixed": "#ffd33a",
+              "tertiary-container": "#ffd33a",
+              "on-secondary-fixed-variant": "#665500",
+              "outline-variant": "#d4a46f",
+              "on-background": "#452800",
+              "primary": "#8c4a00",
+              "primary-dim": "#7b4000",
+              "outline": "#986f3f",
+              "surface-bright": "#fff5ed",
+              "tertiary": "#6f5900",
+              "on-tertiary-container": "#5c4900",
+              "inverse-primary": "#fd8b00",
+              "surface-dim": "#ffcb93",
+              "error-container": "#f95630",
+              "secondary-container": "#ffd709",
+              "error": "#b02500",
+              "surface-container": "#ffe4c9",
+              "inverse-on-surface": "#c29461",
+              "on-tertiary": "#fff2d3",
+              "secondary-fixed": "#ffd709",
+              "on-tertiary-fixed": "#453600",
+              "inverse-surface": "#190b00"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff5ed;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar (JSON Mapping) -->
+<header class="w-full top-0 sticky bg-orange-50 dark:bg-stone-950 z-50">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-orange-200 flex-shrink-0">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="portrait of a young man with a warm smile, outdoor natural lighting, soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6gHvoXlljQTzzjuuz7XOPxLBF3nTSr95fNgSx1cKsDIOfYvohN-U8GxwShgpIUY04y7JV0A9y3mEqvUK9GVtpPNaRXKu6cPFjGeY5BGwMNlULOqXV-sXuQiAozd5nbSZAOa8VUwlYyGHtfvg_bIHkT8PoNOZF4gi25EnWZxGu26RoaWBQGz3iJrMohvic5MgELcE214JikfkFuJ_7nJhzm0Vs6QI50daQuMh7a-JhGz9HBC88PYZr9I8TG7VN3J2t-8Gt_r0PsSY"/>
+</div>
+<div class="flex flex-col">
+<span class="font-plus-jakarta text-lg font-bold text-orange-900 dark:text-orange-200">Radiant</span>
+<span class="text-[10px] font-semibold text-orange-700/70 dark:text-orange-400/70 uppercase tracking-widest">Active Now</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-orange-200/50 dark:hover:bg-stone-800 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-orange-900 dark:text-orange-200" data-icon="search">search</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-orange-200/50 dark:hover:bg-stone-800 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-orange-900 dark:text-orange-200" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<div class="h-px w-full bg-orange-100/50 dark:bg-stone-900/50"></div>
+</header>
+<!-- Main Chat Canvas -->
+<main class="flex-1 overflow-y-auto px-4 py-6 space-y-6 pb-32">
+<!-- Date Separator -->
+<div class="flex justify-center">
+<span class="bg-surface-container-low px-4 py-1 rounded-full text-[11px] font-bold text-on-surface-variant tracking-wider uppercase">Today</span>
+</div>
+<!-- Incoming Message Group -->
+<div class="flex flex-col gap-2 max-w-[85%]">
+<div class="flex items-end gap-2">
+<div class="bg-surface-container-high text-on-surface p-4 rounded-t-lg rounded-br-lg rounded-bl-sm shadow-sm">
+<p class="text-[1rem] leading-relaxed">Hey! Are we still on for the Kinetic Warmth exhibition this evening?</p>
+</div>
+</div>
+<div class="flex items-end gap-2">
+<div class="bg-surface-container-high text-on-surface p-4 rounded-t-lg rounded-br-lg rounded-bl-sm shadow-sm">
+<p class="text-[1rem] leading-relaxed">I heard the lighting installation is absolutely stunning. ✨</p>
+</div>
+<span class="text-[10px] text-on-surface-variant font-medium pb-1">09:41 AM</span>
+</div>
+</div>
+<!-- Outgoing Message Group -->
+<div class="flex flex-col items-end gap-2 ml-auto max-w-[85%]">
+<div class="flex items-end justify-end gap-2 w-full">
+<div class="bg-primary-container text-on-primary-container p-4 rounded-t-lg rounded-bl-lg rounded-br-sm shadow-sm bg-gradient-to-b from-primary-fixed to-primary-dim">
+<p class="text-[1rem] leading-relaxed">Absolutely! I wouldn't miss it for the world. Just finished the project early.</p>
+</div>
+</div>
+<div class="flex items-end justify-end gap-2 w-full">
+<div class="bg-primary-container text-on-primary-container p-4 rounded-t-lg rounded-bl-lg rounded-br-sm shadow-sm bg-gradient-to-b from-primary-fixed to-primary-dim">
+<p class="text-[1rem] leading-relaxed">Should I pick you up around 6:30?</p>
+</div>
+<span class="text-[10px] text-on-surface-variant font-medium pb-1">09:43 AM</span>
+</div>
+</div>
+<!-- Audio Message (The Ripple Wave) -->
+<div class="flex flex-col gap-2 max-w-[85%]">
+<div class="bg-surface-container-high text-on-surface p-4 rounded-t-lg rounded-br-lg rounded-bl-sm shadow-sm flex items-center gap-4">
+<button class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="flex-1 h-8 flex items-center gap-1">
+<div class="flex-1 bg-surface-variant h-1.5 rounded-full relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 bg-secondary w-1/3 rounded-full"></div>
+</div>
+<span class="text-[12px] font-bold text-on-surface-variant">0:14</span>
+</div>
+</div>
+</div>
+<!-- Outgoing Image Message -->
+<div class="flex flex-col items-end gap-2 ml-auto max-w-[85%]">
+<div class="rounded-xl overflow-hidden shadow-lg border-4 border-primary-container">
+<img alt="Design Inspiration" class="w-full h-auto" data-alt="Abstract vibrant orange and yellow fluid shapes swirling together with soft light and high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNdFyfq70oAfOVkaZX5jZ-Mk5_wDZfNhxH44wTDRu6VM3q_4Aym7uotO_njt950ngmDuUpOu1a1P19C1wCFJBcn8KKnFT3K63tmxZL0iHzzY0EZa9gxVZjErRTM28wWXSAO_jp0BVoIwjfDN0DSNQWdZbWyJqwBwRQDg3vfvlalDPzDeNYLvzSnx8hXqeVbuveJolNVUNYEmVB71Gm0zLnRpf9jqlYSYltx8K9Au6z6Jb1PWVVc_6jdL63YKAVIig4LJUUPmdjL6c"/>
+</div>
+<div class="bg-primary-container text-on-primary-container p-4 rounded-t-lg rounded-bl-lg rounded-br-sm shadow-sm bg-gradient-to-b from-primary-fixed to-primary-dim">
+<p class="text-[1rem] leading-relaxed">Check out this color palette I found for the new UI. It fits the "Kinetic" theme perfectly!</p>
+</div>
+</div>
+</main>
+<!-- Bottom Text Input Area -->
+<footer class="fixed bottom-0 w-full z-50 bg-orange-50/80 dark:bg-stone-950/80 backdrop-blur-xl px-4 pb-8 pt-4">
+<div class="max-w-screen-md mx-auto flex items-center gap-3">
+<!-- Add Button -->
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container-highest text-primary transition-transform active:scale-90 duration-200">
+<span class="material-symbols-outlined font-bold" data-icon="add">add</span>
+</button>
+<!-- Input Field Container -->
+<div class="flex-1 flex items-center bg-surface-container-highest rounded-full px-4 h-12 shadow-inner">
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface placeholder-on-surface-variant/50 font-body" placeholder="Type a message..." type="text"/>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="sentiment_satisfied">sentiment_satisfied</span>
+</button>
+</div>
+<!-- Send/Mic Button -->
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-primary-fixed text-on-primary-fixed shadow-md bg-gradient-to-b from-primary-fixed to-primary-dim transition-transform active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="mic" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+</div>
+</footer>
+<!-- BottomNavBar Suppression Rule: Suppressed as this is a focused active chat journey -->
+</body></html>

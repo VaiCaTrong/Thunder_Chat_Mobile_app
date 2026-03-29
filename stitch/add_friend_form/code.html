@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Solaris - Add Friends</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#6f5900",
+              "secondary": "#6c5a00",
+              "surface-dim": "#ffcb93",
+              "primary-dim": "#7b4000",
+              "on-tertiary": "#fff2d3",
+              "on-background": "#452800",
+              "on-secondary": "#fff2cd",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#efc900",
+              "on-secondary-container": "#5b4b00",
+              "primary-fixed-dim": "#ea8000",
+              "secondary-fixed": "#ffd709",
+              "error-container": "#f95630",
+              "on-primary": "#fff0e7",
+              "on-tertiary-container": "#5c4900",
+              "surface-bright": "#fff5ed",
+              "error": "#b02500",
+              "primary-fixed": "#fd8b00",
+              "on-primary-container": "#442100",
+              "on-primary-fixed-variant": "#512800",
+              "on-primary-fixed": "#180800",
+              "background": "#fff5ed",
+              "on-surface-variant": "#7a5426",
+              "tertiary-dim": "#614d00",
+              "on-error": "#ffefec",
+              "surface-variant": "#ffd6ab",
+              "tertiary-fixed": "#ffd33a",
+              "tertiary-fixed-dim": "#efc52b",
+              "surface-tint": "#8c4a00",
+              "on-tertiary-fixed": "#453600",
+              "surface-container-low": "#ffeedf",
+              "on-secondary-fixed": "#453900",
+              "error-dim": "#b92902",
+              "on-secondary-fixed-variant": "#665500",
+              "on-error-container": "#520c00",
+              "primary-container": "#fd8b00",
+              "secondary-container": "#ffd709",
+              "on-tertiary-fixed-variant": "#675200",
+              "inverse-on-surface": "#c29461",
+              "outline": "#986f3f",
+              "on-surface": "#452800",
+              "secondary-dim": "#5e4e00",
+              "surface-container-highest": "#ffd6ab",
+              "primary": "#8c4a00",
+              "outline-variant": "#d4a46f",
+              "inverse-primary": "#fd8b00",
+              "inverse-surface": "#190b00",
+              "tertiary-container": "#ffd33a",
+              "surface": "#fff5ed",
+              "surface-container-high": "#ffddba",
+              "surface-container": "#ffe4c9"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 245, 237, 0.12);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        body {
+            background-color: #fff5ed;
+            color: #452800;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-[#fff5ed] dark:bg-[#1a0f00] docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest flex items-center justify-center">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a smiling young man with warm lighting and a soft blurred indoor background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_WP0XAlkGb_Qf9_9sXjVN0GpcGXBsFl4d2uM0g5VFxPtwk_mzQl0nYvxUWLS6bvz6fw3RxLfYAP-R0cq5OF-47J8HOYwgjJx0yVF3R-io6-GIFpJGyh6_VXu3acLRiCnGNI-6nKYqnCbBEXMfS2b-KScmNatJPx5XNLVqWN_Rb88-w-1MdMfAsYs9HUd-XSaBATyytrFeglznsmsjKHR5lm_V1Bxb9XX39ffkWIX4A5X0ot3t74WAVbqIX56eJ7MjGFDUnfXas8c"/>
+</div>
+</div>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg text-[#8c4a00] dark:text-[#fd8b00] text-2xl font-extrabold tracking-tighter">Solaris</h1>
+<button class="text-[#8c4a00] dark:text-[#fd8b00] hover:bg-[#ffd6ab]/50 dark:hover:bg-[#452800]/50 transition-colors p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="px-6 pt-8 max-w-2xl mx-auto space-y-10">
+<!-- Headline Section -->
+<section>
+<h2 class="font-headline text-3xl font-extrabold tracking-tight text-on-surface mb-2">Add Friends</h2>
+<p class="font-body text-on-surface-variant">Connect with people in the Solaris universe</p>
+</section>
+<!-- Search Section -->
+<section class="space-y-4">
+<div class="relative group">
+<div class="absolute inset-y-0 left-5 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant">person_search</span>
+</div>
+<input class="w-full bg-surface-container-highest border-none rounded-full py-5 pl-14 pr-6 text-on-surface placeholder:text-on-surface-variant/60 focus:ring-2 focus:ring-primary transition-all shadow-sm font-body" placeholder="Find by username or email" type="text"/>
+<button class="absolute right-3 top-2 bottom-2 px-6 bg-primary text-on-primary rounded-full font-bold text-sm hover:brightness-110 transition-all active:scale-95">
+                    Search
+                </button>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Nearby Feature -->
+<div class="bg-surface-container p-8 rounded-xl flex flex-col justify-between aspect-square md:aspect-auto">
+<div>
+<div class="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-primary-container text-3xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-2">Nearby</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Discover users broadcasting their location in your immediate vicinity.</p>
+</div>
+<button class="mt-8 bg-surface-container-highest text-on-surface font-bold py-4 px-6 rounded-xl hover:bg-surface-variant transition-colors flex items-center justify-between group">
+                    Start Scanning
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Invite Section -->
+<div class="bg-primary text-on-primary p-8 rounded-xl flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 bg-on-primary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-primary text-3xl">celebration</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-2">Invite Friends</h3>
+<p class="text-on-primary/80 leading-relaxed">Share the Solaris experience with your inner circle across other platforms.</p>
+</div>
+<div class="flex gap-3 mt-8">
+<button class="flex-1 aspect-square bg-on-primary/10 rounded-full flex items-center justify-center hover:bg-on-primary/20 transition-all active:scale-90">
+<img alt="FB" class="w-6 h-6" data-alt="Facebook icon in solid white minimalist style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5zVcl7Bm7qjleLwwD7oVrYWluFQaQAYRzb9wLkfunYIq3BWSIPj8s9-WOEWkKTVyiOKBn4rOZndob03gtzIKldXH3_zzr7SbJR5bA6BI9dYM7o6-NeoE-Ibcdl8XIFZaGUPMBLHf3Xoye8dwgV1b5MMU6EzM5dsS4lRL9QiG6ylF6YyZ7uQFeqtu8MGVOooM29qdY_DhaxQck9iaR_ZithL9maFm8BneVfnORwCe5AXsUjtPaO6v6bTFIn1dzPRgVRQL25gR-SFc"/>
+</button>
+<button class="flex-1 aspect-square bg-on-primary/10 rounded-full flex items-center justify-center hover:bg-on-primary/20 transition-all active:scale-90">
+<img alt="Twitter" class="w-6 h-6" data-alt="Twitter X icon in solid white minimalist style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw6kZgsletBJHve0I-G3VIqVveZWn7CbKjuUOs_WoEKSS00vuTlCdXNJ6wQMtW89Bnh4BvtWz4KedF3a7ZSK12lJAE-ivG_0QtZJK-8S0tU2ognpypyRmlOE96h4hp6SZ9ZkfRTYUwcBZZuW7SS8APzCxLtYAg-EEFsigKxy9alj4yAsHG51P4bepJqJ7mQe_H_zb9K-XNHj8pZj_SKBZE8s3RjqkdTxd0LeeTC-Bwb0vtCcTT1ajyKubsJV21bddlGoh1Xy5V97E"/>
+</button>
+<button class="flex-1 aspect-square bg-on-primary/10 rounded-full flex items-center justify-center hover:bg-on-primary/20 transition-all active:scale-90">
+<img alt="WA" class="w-6 h-6" data-alt="WhatsApp icon in solid white minimalist style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-x5UX3VcuBoHAdTnxbSzgP517olJKW0o9UYUCMWKJYTdhK0nBY1jiJVyd5qV5ULsvIZC1TysqOeh4KULJXtLQt1KQNIXbul9e5EH69sYo8Dzn6nYeuVCNvoHz6j0dx9nVs66oZKrrnJ2SmF_n_Eq17Yvba1TsNVNGyeSQ_VQU60oBb4t3lrsosGEw0emv_h2i6Ys0hd4k3-gueeFLSAWJ7LXdZhh0KN120kYFZ7K5GlG8K4MKPply2ysDj_kpQVteSFUCa8MuwIY"/>
+</button>
+<button class="flex-1 aspect-square bg-on-primary/10 rounded-full flex items-center justify-center hover:bg-on-primary/20 transition-all active:scale-90">
+<span class="material-symbols-outlined text-on-primary">more_horiz</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Suggested Friends -->
+<section class="space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="font-headline text-xl font-bold">Suggested for you</h3>
+<button class="text-primary font-bold text-sm">See All</button>
+</div>
+<div class="space-y-4">
+<!-- Suggestion 1 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg group hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full border-2 border-primary-container p-0.5">
+<img alt="Suggested User" class="w-full h-full object-cover rounded-full" data-alt="Professional portrait of a woman with curly hair smiling outdoors in golden hour lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_NBPebm7Wu7rpKfkwKqjmbCKx0_ttsiAp115nI1D_0BuWqBWdsSj7TYhQUMAqb9o1y0ItD4q1SvvgqBu6qI_w5xJUcMsE2QBpxBEqKt-1iWE8eU88zopT0ArilX9baUWNHVc775o9Ad-cosC9KHpZUmGNYrQbZqB96iYehEmTfQZEXY1rIkdD1Lt2Ta4VvHGgZvgrGQQEOkbz8yg-vjNXaEOOGeT67fAiW5AxVZYB0YtEquxE8XIuElnSyiFuA6bZI5cM71xJkWA"/>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">Elena Vance</p>
+<p class="font-body text-xs text-on-surface-variant">3 mutual friends</p>
+</div>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed font-bold px-5 py-2 rounded-full text-sm shadow-sm hover:brightness-105 active:scale-95 transition-all">
+                        Add
+                    </button>
+</div>
+<!-- Suggestion 2 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg group hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full border-2 border-primary-container p-0.5">
+<img alt="Suggested User" class="w-full h-full object-cover rounded-full" data-alt="Close up portrait of a middle-aged man with beard and glasses looking directly at camera with warm studio light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5czYt8Sacgw9foKAsRD9W9V_8HX41EBZTgdVT_7IETCBQ8gEBHWVhHWEhpi6Xx3VLDwcbOJuQ2Oxusv-xefh6Wif4Vi8AVvE6sIYusz6aontJKVG8HWaJzXvCkBDBn-LV0ievJqFlwLbmjp2zMTJROX4EH3PmWVnLg6EJzql2HHQ95hdQD0bAA_KWpsu-YYyplPzlnwOrBoSGSnVViyvFgt6IKpc7CRrY4ufIas9KOO3I7d1cIKlrNbUzF30ZepqwFCYfNPez0Vs"/>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">Marcus Thorne</p>
+<p class="font-body text-xs text-on-surface-variant">From your contacts</p>
+</div>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed font-bold px-5 py-2 rounded-full text-sm shadow-sm hover:brightness-105 active:scale-95 transition-all">
+                        Add
+                    </button>
+</div>
+<!-- Suggestion 3 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg group hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full border-2 border-primary-container p-0.5">
+<img alt="Suggested User" class="w-full h-full object-cover rounded-full" data-alt="Portrait of a fashionable young woman with soft natural makeup in a vibrant sunny outdoor setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM3JjMdue6kXfWs1bpzbVszmL1W3m8psPGEvscaZ8rHIg2elJCrqkzIxE2h0OEChgY1_a0DQo-4lzz0X4T4MERa--VjpCRo4Hxxjc28_Y_Wbqrtt4ZAbXOhDzSxsIWiS347sAhhOqTukXwvh--KTfxOfqC3aoc21H97gUSor5FArUgbDQT1qHHzR39PDPaMRF2emWR4OPA469d3o06T-ZcoJ7PtB2WZdqMDkZAfsNLLuOhMKHGgt1Nvb0Ti67DB6w-MlxyIKwKNHA"/>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">Aria Sterling</p>
+<p class="font-body text-xs text-on-surface-variant">Shared interests</p>
+</div>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed font-bold px-5 py-2 rounded-full text-sm shadow-sm hover:brightness-105 active:scale-95 transition-all">
+                        Add
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-[#fff5ed]/80 dark:bg-[#1a0f00]/80 backdrop-blur-xl fixed bottom-0 w-full rounded-t-[3rem] pb-safe no borders tonal shift bg-[#ffeedf] dark:bg-[#2d1b00] shadow-[0_-8px_30px_rgba(69,40,0,0.08)]">
+<a class="flex flex-col items-center justify-center text-[#7a5426] dark:text-[#d4a46f] px-4 py-2 hover:text-[#8c4a00] dark:hover:text-[#fd8b00]" href="#">
+<span class="material-symbols-outlined mb-1">chat_bubble</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Chats</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#fd8b00] text-[#442100] rounded-full px-6 py-2 transition-all duration-300 Active: scale-110 transition-transform duration-200 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Contacts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#7a5426] dark:text-[#d4a46f] px-4 py-2 hover:text-[#8c4a00] dark:hover:text-[#fd8b00]" href="#">
+<span class="material-symbols-outlined mb-1">auto_awesome</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Moments</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#7a5426] dark:text-[#d4a46f] px-4 py-2 hover:text-[#8c4a00] dark:hover:text-[#fd8b00]" href="#">
+<span class="material-symbols-outlined mb-1">settings</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Settings</span>
+</a>
+</nav>
+</body></html>

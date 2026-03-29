@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile - Radiant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#6c5a00",
+              "on-tertiary-fixed-variant": "#675200",
+              "on-primary-fixed": "#180800",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#442100",
+              "on-error": "#ffefec",
+              "surface-container-high": "#ffddba",
+              "primary-fixed-dim": "#ea8000",
+              "secondary-dim": "#5e4e00",
+              "on-secondary-container": "#5b4b00",
+              "surface-tint": "#8c4a00",
+              "error-dim": "#b92902",
+              "on-error-container": "#520c00",
+              "surface": "#fff5ed",
+              "primary-fixed": "#fd8b00",
+              "primary-container": "#fd8b00",
+              "tertiary-fixed-dim": "#efc52b",
+              "on-secondary": "#fff2cd",
+              "on-primary-fixed-variant": "#512800",
+              "on-surface": "#452800",
+              "on-secondary-fixed": "#453900",
+              "surface-container-low": "#ffeedf",
+              "tertiary-dim": "#614d00",
+              "background": "#fff5ed",
+              "surface-container-highest": "#ffd6ab",
+              "surface-variant": "#ffd6ab",
+              "on-primary": "#fff0e7",
+              "on-surface-variant": "#7a5426",
+              "secondary-fixed-dim": "#efc900",
+              "tertiary-fixed": "#ffd33a",
+              "tertiary-container": "#ffd33a",
+              "on-secondary-fixed-variant": "#665500",
+              "outline-variant": "#d4a46f",
+              "on-background": "#452800",
+              "primary": "#8c4a00",
+              "primary-dim": "#7b4000",
+              "outline": "#986f3f",
+              "surface-bright": "#fff5ed",
+              "tertiary": "#6f5900",
+              "on-tertiary-container": "#5c4900",
+              "inverse-primary": "#fd8b00",
+              "surface-dim": "#ffcb93",
+              "error-container": "#f95630",
+              "secondary-container": "#ffd709",
+              "error": "#b02500",
+              "surface-container": "#ffe4c9",
+              "inverse-on-surface": "#c29461",
+              "on-tertiary": "#fff2d3",
+              "secondary-fixed": "#ffd709",
+              "on-tertiary-fixed": "#453600",
+              "inverse-surface": "#190b00"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fff5ed;
+            color: #452800;
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-orange-50 dark:bg-stone-950 w-full top-0 sticky z-50">
+<div class="flex justify-between items-center px-6 py-4 w-full bg-orange-100/50 dark:bg-stone-900/50">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border-2 border-primary-fixed">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="portrait of a smiling young woman with warm lighting and a soft orange-tinted background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN8OS42vVuHlXlrw-FGc7LxJulNKTzjUVORwMIfH-NrmZTM-TTlH5IXEWIDF2LYh-oSD5GLNQGebCoEgnchVwZatqfCg87Dh3HVSe4L-lq7Rgw8VuWWtDyS1v6kHWvXe2qoPFe0RQj24w-_8KyNGtNkcRfCgbNUSLhzT7iSHu18MD2YV4PKsPBJVN6PTI6a8iaoHKUDqbKxWPmDJxK3R0dzwp9ZYvDPRPIxAfPUh-L-Lq0K-I3ewJ_e5nw41ANsKHtwQ1s9VXA1Do"/>
+</div>
+<h1 class="font-headline text-lg font-bold text-orange-900 dark:text-orange-200">Radiant</h1>
+</div>
+<button class="text-orange-900 dark:text-orange-200 hover:bg-orange-200/50 dark:hover:bg-stone-800 transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<main class="flex-1 pb-32">
+<!-- Hero Profile Section -->
+<section class="flex flex-col items-center pt-8 pb-10 px-6 bg-gradient-to-b from-orange-100/30 to-transparent">
+<div class="relative mb-6">
+<!-- Large Circular Avatar -->
+<div class="w-32 h-32 rounded-full ring-4 ring-primary-container p-1 bg-surface shadow-xl">
+<img alt="Profile Picture" class="w-full h-full rounded-full object-cover" data-alt="Close up portrait of a young woman with a friendly expression, soft sunlight, and warm aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr-OgHDgN_geYDeMT2-V-ci3K3XEa0X1rc0NfyNGyOQpi8V3y8PCA32nnmQ8FbpEWJ71UMJOgkxS1hGi5TOFnp5E9KXkgZ7Wq9YBhUIgsvBM0NSchbDKOB2FT8jIjmpzfx9c4h8zQneYmetmFmqowRiCmquh1A5AU63-KzJcCLP05yy6o4uWf8e8YGTmw16fB4YLP96O8GpQIGyKOJvNTYQ6Q8EpvKeuNvGnM4jVdRBeZxgcmd89Fyy3OjYB61SUyU7XiSevs5ad0"/>
+</div>
+<div class="absolute bottom-1 right-1 bg-secondary-container text-on-secondary-container p-2 rounded-full shadow-md flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">edit</span>
+</div>
+</div>
+<div class="text-center space-y-1">
+<h2 class="font-headline text-2xl font-extrabold tracking-tight text-on-surface">Alex Rivera</h2>
+<p class="font-body text-on-surface-variant font-medium text-sm flex items-center justify-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    Radiating good vibes only
+                </p>
+</div>
+<!-- Kinetic Warmth Action Buttons -->
+<div class="flex gap-4 mt-8 w-full max-w-sm">
+<button class="flex-1 bg-primary-fixed text-on-primary-fixed py-4 px-6 rounded-xl font-bold font-headline shadow-lg shadow-orange-900/10 active:scale-95 transition-all bg-gradient-to-b from-primary-fixed to-primary-dim border-none">
+                    Edit Profile
+                </button>
+<button class="bg-secondary-container text-on-secondary-container p-4 rounded-xl shadow-md active:scale-95 transition-all">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</section>
+<!-- Menu Sections -->
+<div class="px-6 space-y-6">
+<!-- Account Section -->
+<div class="space-y-3">
+<h3 class="font-headline text-xs font-extrabold uppercase tracking-widest text-on-surface-variant/70 px-2">Account Settings</h3>
+<div class="bg-surface-container-low rounded-lg overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div class="text-left">
+<span class="block font-headline text-on-surface font-bold">Personal Info</span>
+<span class="text-xs text-on-surface-variant">Update your name and bio</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">alternate_email</span>
+</div>
+<div class="text-left">
+<span class="block font-headline text-on-surface font-bold">Account Access</span>
+<span class="text-xs text-on-surface-variant">Email, password and login</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Privacy Section -->
+<div class="space-y-3">
+<h3 class="font-headline text-xs font-extrabold uppercase tracking-widest text-on-surface-variant/70 px-2">Security &amp; Privacy</h3>
+<div class="bg-surface-container-low rounded-lg overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<div class="text-left">
+<span class="block font-headline text-on-surface font-bold">Privacy Settings</span>
+<span class="text-xs text-on-surface-variant">Who can see your presence</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined">block</span>
+</div>
+<div class="text-left">
+<span class="block font-headline text-on-surface font-bold">Blocked Users</span>
+<span class="text-xs text-on-surface-variant">Manage your restrictions</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Notifications Section -->
+<div class="space-y-3">
+<h3 class="font-headline text-xs font-extrabold uppercase tracking-widest text-on-surface-variant/70 px-2">Preferences</h3>
+<div class="bg-surface-container-low rounded-lg overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<div class="text-left">
+<span class="block font-headline text-on-surface font-bold">Notifications</span>
+<span class="text-xs text-on-surface-variant">Alerts and sound settings</span>
+</div>
+</div>
+<div class="w-10 h-5 bg-primary-container rounded-full relative flex items-center px-1">
+<div class="w-3 h-3 bg-white rounded-full ml-auto shadow-sm"></div>
+</div>
+</button>
+<button class="w-full flex items-center justify-between p-5 hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<div class="text-left">
+<span class="block font-headline text-on-surface font-bold">Appearance</span>
+<span class="text-xs text-on-surface-variant">Theme and chat wallpapers</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Danger Zone -->
+<button class="w-full flex items-center gap-4 p-5 text-error rounded-lg hover:bg-error-container/10 transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-headline font-bold">Sign Out</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-orange-50/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-[0_-4px_20px_rgba(69,40,0,0.06)] rounded-t-[3rem] border-t border-orange-200/20">
+<a class="flex flex-col items-center justify-center text-orange-800/60 dark:text-orange-300/60 px-6 py-2 hover:text-orange-900 dark:hover:text-orange-100 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1">chat_bubble</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase">Chats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-orange-800/60 dark:text-orange-300/60 px-6 py-2 hover:text-orange-900 dark:hover:text-orange-100 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1">group</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase">Contacts</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-orange-400 dark:bg-orange-600 text-orange-950 dark:text-white rounded-full px-6 py-2 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase">Profile</span>
+</a>
+</nav>
+</body></html>

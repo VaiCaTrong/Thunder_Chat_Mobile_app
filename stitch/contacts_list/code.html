@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#6f5900",
+              "secondary": "#6c5a00",
+              "surface-dim": "#ffcb93",
+              "primary-dim": "#7b4000",
+              "on-tertiary": "#fff2d3",
+              "on-background": "#452800",
+              "on-secondary": "#fff2cd",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#efc900",
+              "on-secondary-container": "#5b4b00",
+              "primary-fixed-dim": "#ea8000",
+              "secondary-fixed": "#ffd709",
+              "error-container": "#f95630",
+              "on-primary": "#fff0e7",
+              "on-tertiary-container": "#5c4900",
+              "surface-bright": "#fff5ed",
+              "error": "#b02500",
+              "primary-fixed": "#fd8b00",
+              "on-primary-container": "#442100",
+              "on-primary-fixed-variant": "#512800",
+              "on-primary-fixed": "#180800",
+              "background": "#fff5ed",
+              "on-surface-variant": "#7a5426",
+              "tertiary-dim": "#614d00",
+              "on-error": "#ffefec",
+              "surface-variant": "#ffd6ab",
+              "tertiary-fixed": "#ffd33a",
+              "tertiary-fixed-dim": "#efc52b",
+              "surface-tint": "#8c4a00",
+              "on-tertiary-fixed": "#453600",
+              "surface-container-low": "#ffeedf",
+              "on-secondary-fixed": "#453900",
+              "error-dim": "#b92902",
+              "on-secondary-fixed-variant": "#665500",
+              "on-error-container": "#520c00",
+              "primary-container": "#fd8b00",
+              "secondary-container": "#ffd709",
+              "on-tertiary-fixed-variant": "#675200",
+              "inverse-on-surface": "#c29461",
+              "outline": "#986f3f",
+              "on-surface": "#452800",
+              "secondary-dim": "#5e4e00",
+              "surface-container-highest": "#ffd6ab",
+              "primary": "#8c4a00",
+              "outline-variant": "#d4a46f",
+              "inverse-primary": "#fd8b00",
+              "inverse-surface": "#190b00",
+              "tertiary-container": "#ffd33a",
+              "surface": "#fff5ed",
+              "surface-container-high": "#ffddba",
+              "surface-container": "#ffe4c9"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-[#fff5ed] dark:bg-[#1a0f00] docked full-width top-0 z-40">
+<div class="flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a smiling woman with warm sunlit hair and soft blurred background in a modern aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEdIy0sOxDJdP1LfVMcWu1DIlScBHQ0wd1hMnbWNECeiLJ8uA8xNHILyboxfzwfaBPmHsKvd0N6kxkWa3K9_PJZGh_55oPgJWpHvVRPzKmUsBS4lYR4e6CQBKHIoEoWlGFN3CCdasiOTmj3QBKIns2BIA2xUU49Qqxjss2vCcHa-QpqIij7ZEd2KW0qcvXHwVlUfzlXKGuPvY62aI7d3EeeZDPFC_puBvtpaL2R14oOxCU-CscSfeQcjYPaiFigkdT-ZT0eDDuJUA"/>
+</div>
+<h1 class="text-2xl font-extrabold text-[#8c4a00] dark:text-[#fd8b00] tracking-tighter font-headline">Solaris</h1>
+</div>
+<button class="text-[#8c4a00] dark:text-[#fd8b00] hover:bg-[#ffd6ab]/50 transition-colors p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="min-h-screen pb-32">
+<!-- Hero Section / Title -->
+<section class="px-6 pt-8 pb-4">
+<h2 class="font-headline font-extrabold text-4xl text-on-surface tracking-tight">Contacts</h2>
+<p class="text-on-surface-variant font-medium mt-1">Connect with your radiant circle</p>
+</section>
+<!-- Search Bar -->
+<section class="px-6 mb-8">
+<div class="bg-surface-container-highest rounded-full px-6 py-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-on-surface-variant w-full font-medium" placeholder="Search friends..." type="text"/>
+</div>
+</section>
+<!-- Alphabetical List -->
+<div class="space-y-8 px-6">
+<!-- Section A -->
+<div>
+<div class="flex items-center gap-4 mb-4">
+<span class="font-headline font-bold text-lg text-primary">A</span>
+<div class="h-[1px] flex-grow bg-outline-variant opacity-30"></div>
+</div>
+<div class="space-y-4">
+<!-- Contact Card -->
+<div class="group flex items-center justify-between p-4 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors duration-300">
+<div class="flex items-center gap-5">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="man with beard smiling warmly outdoor in soft sunlight, professional headshot style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Nd5Lsfi6Dhtd0JuDw_7lFNm-cKauKwT0jMzFQNPyxNEHwsMvoWSUeo3P0RAbQ7xzdFdZxMPeN1JQUsd-zliO5jtPcWnCjumursfPcm9Zu2TOFRjaf1VTiqVtjCx3VEgTTvcPpOuUrtdrdeYD-HaI5Q1ZmJC6VVhQGE6peJY4hnXy4EKbw1hYZ4Q422jDdrCaSPitIYt5Um5bg_KtEBbpsP0dLSfdxJOiDclZ1hLC2l-_2Z6x7uT5ZsZFOlm_n8TWLhUWC7oH-lU"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-primary border-4 border-surface-container-low rounded-full"></div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Adrian Thorne</h3>
+<p class="text-sm text-primary font-semibold">Active</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+</div>
+<div class="group flex items-center justify-between p-4 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors duration-300">
+<div class="flex items-center gap-5">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="woman laughing with bright lighting and warm orange tones, editorial style portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3tvPtFiJEbHFXv1iipPqxBg0VBbAXqPn-4HPFLU8NuLu5rt-vig55KUF7LCiwiaboROvnMLzHvJBaMaDQqFyTVNY0gNPi4p8UHU1-4VyZT0y6OMm66ZmNdQ0Qx7O0jDDLEHf2M0foLePusDcqYfn2ZbgaT65NZQycADf4Unhe-tm3RWRNGg0tUeBiaZazEHizeOP7Yt0mfCIa3DhL1Y9Y0L_Ukc5eYA38Ok2i2wOlpp5cLnbR8HT45-cV4vU7i4FDYj8j9E6iNVk"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-on-surface-variant border-4 border-surface-container-low rounded-full"></div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Amara Vance</h3>
+<p class="text-sm text-on-surface-variant">Last seen 12m ago</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section B -->
+<div>
+<div class="flex items-center gap-4 mb-4">
+<span class="font-headline font-bold text-lg text-primary">B</span>
+<div class="h-[1px] flex-grow bg-outline-variant opacity-30"></div>
+</div>
+<div class="space-y-4">
+<div class="group flex items-center justify-between p-4 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors duration-300">
+<div class="flex items-center gap-5">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="man looking at camera with friendly expression, golden hour sunset lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA00XRrMgfgc-0spIaLZGG4AkJoS_nFguFjJNMGNe4gYoDbTpNnruFTis8V_KfECdDVDfxQ3wRr5L1TCIqCfLTLp9pWjsX6wbPdMwUPRHn_ywdLI1dvIBMnyVE-GdJDnBdtkURXrHK5SBX63DZKsjoW93UYMC5W40lwjrIDe5l2IWK0Jqv9uYReBeGm3DWRGOLZkScYtWei7B2j8LaSJkjd5pi_9sYgBiJMW3EtULM0TvEjyAsx_ZPrIQJ7Z2Ytdktg8vX5wwjPjfc"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-primary border-4 border-surface-container-low rounded-full"></div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Brooks Jensen</h3>
+<p class="text-sm text-primary font-semibold">Active</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section C -->
+<div>
+<div class="flex items-center gap-4 mb-4">
+<span class="font-headline font-bold text-lg text-primary">C</span>
+<div class="h-[1px] flex-grow bg-outline-variant opacity-30"></div>
+</div>
+<div class="space-y-4">
+<div class="group flex items-center justify-between p-4 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors duration-300">
+<div class="flex items-center gap-5">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="woman standing in a sun-drenched field, soft glowing light, cinematic feel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcXp9vpBGxYnZq40J7vbmKnDAuusosZ5W24KGEYEosiztEVV1tFG4jP-6MLAVR3gzvQL1O4ocQuCJOkijQ-QT7PdtSicQE77ELwI9mWROMWU5y-YMkORQoi49QqTWrFRTzjH8HSYMpQISR9_BkBrHAGOAZ6yJ4us_D08AjW9QSK1yZNHCgRM5jgCBxulAvOb7VPcrIrkqOP-WICEIHW9NZ__Uqpkt-iaxSU3SZbgKeiA3jk1TkyjNm1PERMxB5UY-U6MS4H5oRzU0"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-on-surface-variant border-4 border-surface-container-low rounded-full"></div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Cassandra Bloom</h3>
+<p class="text-sm text-on-surface-variant">Last seen 2h ago</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB: Add Friend -->
+<button class="fixed bottom-28 right-6 z-50 w-16 h-16 bg-primary-fixed text-on-primary-fixed rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-300 group">
+<span class="material-symbols-outlined text-3xl" data-icon="person_add" style="font-variation-settings: 'FILL' 1;">person_add</span>
+<span class="absolute right-full mr-4 bg-on-surface text-surface px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Add Friend</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-[#fff5ed]/80 dark:bg-[#1a0f00]/80 backdrop-blur-xl rounded-t-[3rem] pb-safe shadow-[0_-8px_30px_rgba(69,40,0,0.08)]">
+<!-- Chats Tab -->
+<a class="flex flex-col items-center justify-center text-[#7a5426] dark:text-[#d4a46f] px-4 py-2 hover:text-[#8c4a00] transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider mt-1">Chats</span>
+</a>
+<!-- Contacts Tab (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#fd8b00] text-[#442100] rounded-full px-6 py-2 transition-all duration-300 scale-110" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider mt-1">Contacts</span>
+</a>
+<!-- Moments Tab -->
+<a class="flex flex-col items-center justify-center text-[#7a5426] dark:text-[#d4a46f] px-4 py-2 hover:text-[#8c4a00] transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider mt-1">Moments</span>
+</a>
+<!-- Settings Tab -->
+<a class="flex flex-col items-center justify-center text-[#7a5426] dark:text-[#d4a46f] px-4 py-2 hover:text-[#8c4a00] transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="settings">settings</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider mt-1">Settings</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Radiant Chats</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#6c5a00",
+              "on-tertiary-fixed-variant": "#675200",
+              "on-primary-fixed": "#180800",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#442100",
+              "on-error": "#ffefec",
+              "surface-container-high": "#ffddba",
+              "primary-fixed-dim": "#ea8000",
+              "secondary-dim": "#5e4e00",
+              "on-secondary-container": "#5b4b00",
+              "surface-tint": "#8c4a00",
+              "error-dim": "#b92902",
+              "on-error-container": "#520c00",
+              "surface": "#fff5ed",
+              "primary-fixed": "#fd8b00",
+              "primary-container": "#fd8b00",
+              "tertiary-fixed-dim": "#efc52b",
+              "on-secondary": "#fff2cd",
+              "on-primary-fixed-variant": "#512800",
+              "on-surface": "#452800",
+              "on-secondary-fixed": "#453900",
+              "surface-container-low": "#ffeedf",
+              "tertiary-dim": "#614d00",
+              "background": "#fff5ed",
+              "surface-container-highest": "#ffd6ab",
+              "surface-variant": "#ffd6ab",
+              "on-primary": "#fff0e7",
+              "on-surface-variant": "#7a5426",
+              "secondary-fixed-dim": "#efc900",
+              "tertiary-fixed": "#ffd33a",
+              "tertiary-container": "#ffd33a",
+              "on-secondary-fixed-variant": "#665500",
+              "outline-variant": "#d4a46f",
+              "on-background": "#452800",
+              "primary": "#8c4a00",
+              "primary-dim": "#7b4000",
+              "outline": "#986f3f",
+              "surface-bright": "#fff5ed",
+              "tertiary": "#6f5900",
+              "on-tertiary-container": "#5c4900",
+              "inverse-primary": "#fd8b00",
+              "surface-dim": "#ffcb93",
+              "error-container": "#f95630",
+              "secondary-container": "#ffd709",
+              "error": "#b02500",
+              "surface-container": "#ffe4c9",
+              "inverse-on-surface": "#c29461",
+              "on-tertiary": "#fff2d3",
+              "secondary-fixed": "#ffd709",
+              "on-tertiary-fixed": "#453600",
+              "inverse-surface": "#190b00"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        -webkit-tap-highlight-color: transparent;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-orange-50 dark:bg-stone-950 w-full top-0 sticky z-50">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border-2 border-primary/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close up portrait of a friendly man with a slight smile in soft studio lighting against a warm neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkPjtkUfeXYgf7gHRjBRlo0NyE_sDI7_ZHfOiwqBrjPqKiyZ-iXZyH7teY-FPpBNo1Bb4G_BfvQqY_BcaFVZWWPdX7_KXEDrGJlGVdAjR_6MMDDxVA7JsnK-zkY5YfNVjIYrj7RBiM8hBbjNlvf5buYpVH58MQMwBiGbEcB-R-6usoOO1FduEzA1VK74Gm2L52QgAUI1r2MLdyydxjDYIR_AdhQ93v6FZn8m1w2TJwG-K_xRgpWWx_-nc-_pUvZifqmmbHXG0No5U"/>
+</div>
+<h1 class="font-headline text-lg font-bold text-orange-900 dark:text-orange-200">Radiant</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-orange-200/50 dark:hover:bg-stone-800 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-orange-900 dark:text-orange-200" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="px-4 py-2 space-y-6">
+<!-- Stories/Status Section -->
+<section class="overflow-x-auto no-scrollbar flex gap-4 py-2">
+<div class="flex flex-col items-center gap-1 shrink-0">
+<div class="w-16 h-16 rounded-full p-1 bg-gradient-to-tr from-primary to-secondary">
+<div class="w-full h-full rounded-full border-4 border-background bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="add">add</span>
+</div>
+</div>
+<span class="text-[11px] font-semibold text-on-surface-variant">Your Story</span>
+</div>
+<div class="flex flex-col items-center gap-1 shrink-0">
+<div class="w-16 h-16 rounded-full p-1 bg-gradient-to-tr from-primary to-tertiary">
+<img alt="Sarah" class="w-full h-full rounded-full object-cover border-2 border-background" data-alt="portrait of a smiling woman with long brown hair wearing a bright orange sweater in a sunlit outdoor setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdI9uZJch9M9tr7rYQReCUvhFwPaEuFdEXkzq-6aBzicaoSqJm8jVNa5BkOsn6LYSh0zl-Vk5iUuhQsa8GjT54f6R1sAwfFMEdHm90S-e7qdKjG7PM1xycBWuxS-wOJGuGdtc1sqhg3b4cfbUtJbo6AFM1jm4447FmlKNk3SFdJ0gf5mwTCyaUXaE12Haoag42GKB80Q6s9ejIs2Ws2EtjSBACyQzHRhK4wb90JH0UL685noVytuUmdfg9LZRYJWoEuorIhDwPPNo"/>
+</div>
+<span class="text-[11px] font-semibold text-on-surface-variant">Sarah</span>
+</div>
+<div class="flex flex-col items-center gap-1 shrink-0">
+<div class="w-16 h-16 rounded-full p-1 bg-gradient-to-tr from-primary to-tertiary">
+<img alt="Marcus" class="w-full h-full rounded-full object-cover border-2 border-background" data-alt="professional portrait of a man with a beard looking directly at camera with warm lighting and blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4vGjGFIo9a8QS1TOycWPEUboRLgPnlu40jm14GMHQtmipd7BtT_nHx6LwlMn5dUGSlGHKrZiIVWJQyHrXTFdc6byM5_TZJwcowzoiKEf1OvQUQcPf_jy5mUxIqjZWBr8f9-Y8cxZA7EKQfnx1oCcC5x2TlJ4dI0_K8rME-bo317qsI_88MwO0ICidwbfkOYGGaCGQ26TQy2MnJZEpH-t55JSyk0n6oCdIGfEmsUeKUC5brSf76ZOeNtu2KHLU4DlU7fTKr3FX4MQ"/>
+</div>
+<span class="text-[11px] font-semibold text-on-surface-variant">Marcus</span>
+</div>
+<div class="flex flex-col items-center gap-1 shrink-0">
+<div class="w-16 h-16 rounded-full p-1 bg-gradient-to-tr from-primary to-tertiary">
+<img alt="Elena" class="w-full h-full rounded-full object-cover border-2 border-background" data-alt="portrait of a young woman laughing in golden hour sunlight with hair catching the warm glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnG3lAFVkfR_TEWcLk9Sn8399qtINikP9LNUlgIgFVkjb3VGmN66IU0n56DDn88duPIeSVCcMwYnVVBJMjk3dABHsVAjnr2edo_Ab75LLN1fDwp54-lG407YNwbxNWA-Aep5nKnA88SWo36acrlAs8kjE2zOsIv5636knxnokrfux3YBhZYrPWPg1pLG39xRq4BhtAKkw_BucFjU-azNH_t17T8RPpih0LqKEiycMOll3pHFF4uQaiNj6m_k0BAT3lLILiGPVNE4c"/>
+</div>
+<span class="text-[11px] font-semibold text-on-surface-variant">Elena</span>
+</div>
+<div class="flex flex-col items-center gap-1 shrink-0">
+<div class="w-16 h-16 rounded-full p-1 bg-gradient-to-tr from-primary to-tertiary">
+<img alt="David" class="w-full h-full rounded-full object-cover border-2 border-background" data-alt="headshot of a man with short hair and glasses smiling gently in a soft lit indoor environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPdWUJXTX4cedyAtXdt2ePx9_fusStYn0tYIz9pnYBI8inwKF_V0de7pmOfXqgCMJjYKIaNwYSqYXKi-xzqBaVVwowdCXs3Vp0KrfwHUN_xIxr2jxlNhtQFIvfCyd2ch8QAMohC9dD2io_d8IUE0Lz2oXoc0UrTqX9fOmyLUHisOx_k-6Piv_2LX5SdWJlCGli5Swe-eLoHNGIMrRJYge76IVbbSaKjByqiSxGBKJCbk8ngrJ8FDCWc3yhVs_Rnry5LmCgdBHw06A"/>
+</div>
+<span class="text-[11px] font-semibold text-on-surface-variant">David</span>
+</div>
+</section>
+<!-- Chat List -->
+<div class="space-y-1">
+<h2 class="font-headline text-2xl font-extrabold text-on-surface px-2 mb-4 tracking-tight">Recent Messages</h2>
+<div class="space-y-2">
+<!-- Chat Item 1: Unread -->
+<div class="group flex items-center gap-4 p-4 rounded-xl hover:bg-surface-container-low transition-colors duration-200 active:scale-[0.98]">
+<div class="relative shrink-0">
+<img alt="Sarah Jenkins" class="w-14 h-14 rounded-full object-cover" data-alt="portrait of a woman with a joyful expression and warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcKN8PjUvWYk5MmQk1_RS-tCNIrNEZB3OKYoSuLr2yCyVTl80FUbBgksYZh9FFnW4KElbBHbi3X02PPZkPpnDsFcGk00vKygaRA9JIJ2jE8Jj7s3uGJKS8DaMpAIPgCVvXAExFwWZTHx9hIIb25thU879x4o-I5nZ-k5g_HVChPDQiQWLwJCQsp-K5m5P6ogvlDwE_MFIeDKO2mh8n_Y4xUBIuUsB32luiqBzDmsqTtwTaSWqfs-cRvKUtmJ6giavEh-8n-jr3BuA"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 border-2 border-background rounded-full"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline text-[1.125rem] font-bold text-on-surface truncate">Sarah Jenkins</h3>
+<span class="text-[0.75rem] font-bold text-primary">12:45 PM</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-[1rem] text-on-surface font-semibold truncate pr-4">Can't wait for the meetup tonight! ☕️</p>
+<div class="bg-primary text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full shrink-0">2</div>
+</div>
+</div>
+</div>
+<!-- Chat Item 2: Read -->
+<div class="group flex items-center gap-4 p-4 rounded-xl hover:bg-surface-container-low transition-colors duration-200 active:scale-[0.98]">
+<div class="relative shrink-0">
+<img alt="Marcus Chen" class="w-14 h-14 rounded-full object-cover" data-alt="close up profile of a man with thoughtful expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPZtQlj0lTSuafEqdCvnsKMFbkGZhzIko47A0uddGVWP7odgJ3nuNLeh1w8gGM-86c5QEOFsEhC7dcIgXG1l1YH2eVhtnIJDQerOZIBwy5ox5tXmSc0vhYY7TA9AnfMT8Mu4SuG7abzAdDTRe_ZkS55NrBVO2RS1DKcOFcx3xJ9ACtln4G3aQPERHCzbWeGNSijGIpufh5LxxXvr7WARtgOLewUVB5K7GRE5umHJCTmPXTXnBs3D-gtkNEmwqnX4VYsNtxCgr_nNM"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-stone-300 border-2 border-background rounded-full"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline text-[1.125rem] font-semibold text-on-surface truncate">Marcus Chen</h3>
+<span class="text-[0.75rem] text-on-surface-variant">10:20 AM</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="done_all" style="font-variation-settings: 'FILL' 0;">done_all</span>
+<p class="text-[1rem] text-on-surface-variant truncate pr-4">The design assets are ready for review.</p>
+</div>
+</div>
+</div>
+<!-- Chat Item 3: Audio Message -->
+<div class="group flex items-center gap-4 p-4 rounded-xl hover:bg-surface-container-low transition-colors duration-200 active:scale-[0.98]">
+<div class="relative shrink-0">
+<img alt="Elena Rodriguez" class="w-14 h-14 rounded-full object-cover" data-alt="happy woman laughing in a field of flowers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKjhmC7bEKHuP9Ep4gPMWKtF_Kbob8fKn_jipEA1EL58VZ-tSbvYrNCDd9SgDVtcsL1D5Roetr4rSE-Z8kFRiENgnkUj8FZMiGINIasf7N9FD4vtl9zG3qPLDaH2069C89p0RLz7J5nbFqSpubebj7OhexOLdSfIWFia7Cm5C5XtdUvCdauTpayL2krN4INxjvHVAyTj1KaRw4Wpsc5waqMfMTBI6hvY9_jPDhBUipKJjtL7mXuK6hdbyXMu4tD9sywM8bdElSDAk"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline text-[1.125rem] font-bold text-on-surface truncate">Elena Rodriguez</h3>
+<span class="text-[0.75rem] font-bold text-primary">Yesterday</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary" data-icon="mic" style="font-variation-settings: 'FILL' 1;">mic</span>
+<p class="text-[1rem] text-on-surface font-semibold truncate pr-4 italic">Audio message (0:45)</p>
+<div class="bg-primary text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full shrink-0">1</div>
+</div>
+</div>
+</div>
+<!-- Chat Item 4: Read -->
+<div class="group flex items-center gap-4 p-4 rounded-xl hover:bg-surface-container-low transition-colors duration-200 active:scale-[0.98]">
+<div class="relative shrink-0">
+<div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="group">group</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline text-[1.125rem] font-semibold text-on-surface truncate">Creative Squad 🎨</h3>
+<span class="text-[0.75rem] text-on-surface-variant">Yesterday</span>
+</div>
+<div class="flex items-center gap-1">
+<p class="text-[1rem] text-on-surface-variant truncate pr-4"><span class="font-bold">David:</span> Check out this new palette!</p>
+</div>
+</div>
+</div>
+<!-- Chat Item 5: Read -->
+<div class="group flex items-center gap-4 p-4 rounded-xl hover:bg-surface-container-low transition-colors duration-200 active:scale-[0.98]">
+<div class="relative shrink-0">
+<img alt="David Miller" class="w-14 h-14 rounded-full object-cover" data-alt="man smiling in casual clothes outdoor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFy196RoFs67HE5oZaqCeHmLHUKeCuR652sLWqwXfhI4HhyixLB0ezHGtUVN5tRj5DDts1KmK7cOkLT8V3NCPCCLBaA-OTFFyTFHIXZVgIU8m55D4zoBdj7zvmFYCB3b7ELny9iL4pjtqPuMOnoUEhQ6MAi3iLYi5TfNK-oaqVUg271Sa1j-DuPnD76vf0PIBCXHRvPg46lxc3y4ceRDFGCDuV6B_-3tqCPJbiq6W0gNylVcJOG3RbD8xvCGYeyKTSUjbBiV8ysCA"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline text-[1.125rem] font-semibold text-on-surface truncate">David Miller</h3>
+<span class="text-[0.75rem] text-on-surface-variant">Monday</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant" data-icon="done" style="font-variation-settings: 'FILL' 0;">done</span>
+<p class="text-[1rem] text-on-surface-variant truncate pr-4">Sent an image</p>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant" data-icon="image" style="font-variation-settings: 'FILL' 0;">image</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-28 right-6 w-16 h-16 bg-primary shadow-lg shadow-primary/30 text-white rounded-full flex items-center justify-center active:scale-90 transition-transform duration-200 z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="edit_square" style="font-variation-settings: 'FILL' 1;">edit_square</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-orange-50/80 dark:bg-stone-950/80 backdrop-blur-xl rounded-t-[3rem] border-t border-orange-200/20 shadow-[0_-4px_20px_rgba(69,40,0,0.06)]">
+<!-- Chats (Active) -->
+<a class="flex flex-col items-center justify-center bg-orange-400 dark:bg-orange-600 text-orange-950 dark:text-white rounded-full px-6 py-2 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase">Chats</span>
+</a>
+<!-- Contacts (Inactive) -->
+<a class="flex flex-col items-center justify-center text-orange-800/60 dark:text-orange-300/60 px-6 py-2 hover:text-orange-900 dark:hover:text-orange-100 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase">Contacts</span>
+</a>
+<!-- Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-orange-800/60 dark:text-orange-300/60 px-6 py-2 hover:text-orange-900 dark:hover:text-orange-100 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[10px] font-semibold tracking-wide uppercase">Profile</span>
+</a>
+</nav>
+</body></html>
